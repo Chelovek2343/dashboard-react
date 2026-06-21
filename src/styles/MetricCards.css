@@ -1,0 +1,75 @@
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.metric-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.metric-card.accent {
+  background: var(--green-400);
+  border-color: var(--green-400);
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-card.accent .metric-label {
+  color: var(--green-50);
+  opacity: 0.85;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.metric-card.accent .metric-value {
+  color: var(--white);
+}
+
+.metric-change {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.metric-change.positive {
+  color: var(--green-600);
+}
+
+.metric-change.neutral {
+  color: var(--gray-500);
+}
+
+.metric-card.accent .metric-change {
+  color: var(--green-50);
+}
+
+@media (max-width: 768px) {
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 20px;
+  }
+}

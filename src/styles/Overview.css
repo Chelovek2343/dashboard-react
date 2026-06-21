@@ -1,0 +1,48 @@
+.overview-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overview-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+}
+
+.overview-label {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.overview-value {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.overview-value.warning {
+  color: #C07800;
+}
+
+.overview-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.badge.green {
+  background: var(--green-50);
+  color: var(--green-600);
+}
