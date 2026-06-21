@@ -1,16 +1,47 @@
-# React + Vite
+# FinDash — Банковский Dashboard на React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Многостраничное SPA приложение в стиле интернет-банкинга, построенное на React + Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+[chelovek2343.github.io/dashboard-react](https://chelovek2343.github.io/dashboard-react/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Стек
+- **React 18** — компонентный подход, useState, useEffect
+- **React Router v6** — клиентский роутинг между страницами (HashRouter)
+- **Vite** — сборщик проекта
+- **CSS Modules** — стили разделены по компонентам
+- **ExchangeRate API** — живые курсы валют через fetch/async/await
+- **localStorage** — сохранение данных профиля между сессиями
+- **GitHub Actions** — автоматический деплой на GitHub Pages (CI/CD)
 
-## React Compiler
+## 📱 Страницы
+- **Dashboard** — карточки баланса, транзакции с фильтрацией, курсы валют
+- **Транзакции** — полная история с фильтрацией по категориям
+- **Карты** — банковские карты и счета
+- **Аналитика** — график доходов и расходов по месяцам
+- **Настройки** — редактирование профиля с сохранением в localStorage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ⚙️ Фичи
+- Живые курсы валют с автообновлением каждые 30 секунд
+- Skeleton loader пока данные загружаются
+- Фильтрация транзакций по категории без перезагрузки страницы
+- Данные профиля сохраняются в localStorage
+- Адаптивная верстка + бургер-меню для мобильных
+- CI/CD через GitHub Actions — каждый push автоматически деплоится
 
-## Expanding the ESLint configuration
+## 🚦 Запуск локально
+```bash
+git clone https://github.com/Chelovek2343/dashboard-react.git
+cd dashboard-react
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📁 Структура проекта
+```
+src/
+├── components/    # Переиспользуемые компоненты (Sidebar, Topbar и др.)
+├── pages/         # Страницы приложения
+├── styles/        # CSS файлы для каждого компонента
+└── App.jsx        # Главный компонент с роутингом
+```
