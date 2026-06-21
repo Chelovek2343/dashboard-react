@@ -1,34 +1,37 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import Topbar from './components/Topbar'
-import MetricCards from './components/MetricCards'
-import Transactions from './components/Transactions'
-import Overview from './components/Overview'
-import CurrencyRates from './components/CurrencyRates'
+import Dashboard from './pages/Dashboard'
+import TransactionsPage from './pages/Transactions'
+import Cards from './pages/Cards'
+import Analytics from './pages/Analytics'
+import Settings from './pages/Settings'
 import './styles/App.css'
 
 function App() {
-  const [activePage, setActivePage] = useState('Dashboard')
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <div className="app">
-      <Sidebar
-        activePage={activePage}
-        onNavigate={setActivePage}
-        isOpen={menuOpen}
-        onClose={() => setMenuOpen(false)}
-      />
-      <main className="main">
-        <Topbar onBurgerClick={() => setMenuOpen(prev => !prev)} />
-        <MetricCards />
-        <section className="bottom-grid">
-          <Transactions />
-          <Overview />
-        </section>
-        <CurrencyRates />
-      </main>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Sidebar
+          isOpen={menuOpen}
+          onClose={() => setMenuOpen(false)}
+        />
+        <main className="main">
+          <Topbar onBurgerClick={() => setMenuOpen(prev => !prev)} />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/transactions" element={<TransactionsPage />} />
+            <Route path="/cards" element={<Cards />} />
+            <Route path="/analytics" element={<Analytics />} />
+            <Route path="/settings" element={<Settings />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
   )
 }
 

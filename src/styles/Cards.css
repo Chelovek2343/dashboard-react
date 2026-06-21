@@ -1,0 +1,75 @@
+.cards-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.bank-card {
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: white;
+  min-height: 180px;
+}
+
+.bank-card.green {
+  background: linear-gradient(135deg, #639922, #3B6D11);
+}
+
+.bank-card.dark {
+  background: linear-gradient(135deg, #2C2C2C, #1A1A1A);
+}
+
+.bank-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bank-card-type {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.bank-card-logo {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bank-card-number {
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.bank-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.bank-card-label {
+  font-size: 11px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.bank-card-balance {
+  font-size: 18px;
+  font-weight: 600;
+}
