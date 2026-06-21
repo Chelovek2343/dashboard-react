@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <script>
-      const path = window.location.pathname;
+      const base = '/dashboard-react';
+      const path = window.location.pathname.replace(base, '') || '/';
       const search = window.location.search;
       const hash = window.location.hash;
-      const base = '/dashboard-react';
-      const route = path.replace(base, '') || '/';
-      sessionStorage.setItem('redirect', route + search + hash);
+      sessionStorage.setItem('redirect', path + search + hash);
       window.location.replace(base + '/');
     </script>
   </head>
