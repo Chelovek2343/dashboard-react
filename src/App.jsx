@@ -33,7 +33,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="app">
         <Sidebar
           isOpen={menuOpen}
@@ -57,7 +57,7 @@ function App() {
           </Routes>
         </main>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
