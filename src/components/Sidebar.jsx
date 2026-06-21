@@ -19,7 +19,7 @@ function Sidebar({ activePage, onNavigate, isOpen, onClose }) {
         </div>
         <nav className="nav">
           {navItems.map(item => (
-
+            <a
               key={item.label}
               href="#"
               className={`nav-item ${activePage === item.label ? 'active' : ''}`}
